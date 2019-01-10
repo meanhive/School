@@ -1,0 +1,390 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <ol class="breadcrumb">
+            <li><a href="../../index.html"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="#">Student</a></li>
+            <li class="active">Student Attendance</li>
+        </ol>
+    </section>
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="nav-tabs-custom animated slideInUp">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#attendance" data-toggle="tab">Attendance (Daily & Subject Wise)</a></li>
+                        <li><a href="#view-attendance" data-toggle="tab">View Attendance</a></li>
+                    </ul>
+                    <div class="tab-content ">
+                        <div class="tab-pane active" id="attendance">
+                            <div class="panel panel-default animated slideInUp">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title"> Attendance </h4>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="col-sm-12">
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                                    <div class="form-group">
+                                                        <label for="">Class <span class="red">*</span> </label>
+                                                        <div>
+                                                            <select class="selectpicker">
+                                                                <option>Select Class</option>
+                                                                <option>Class 1</option>
+                                                                <optio n>Class 2</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                                    <div class="form-group">
+                                                        <label for="">Section <span class="red">*</span> </label>
+                                                        <div>
+                                                            <select class="selectpicker">
+                                                                <option>Select Section</option>
+                                                                <option>Section 1</option>
+                                                                <option>Section 2</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                                    <div class="form-group">
+                                                        <label for="">Subject <span class="red">*</span> </label>
+                                                        <div>
+                                                            <select class="selectpicker">
+                                                                <option>Select Subject</option>
+                                                                <option>Subject 1</option>
+                                                                <option>Subject 2</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                                    <div class="form-group">
+                                                        <label for="">Date <span class="red">*</span> </label>
+                                                        <div>
+                                                            <input type="text" class="form-control" placeholder="Date ">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box box-rich-blue animated slideInUp">
+                                <div class="box-header ">
+                                    <h3 class="box-title">Student List</h3>
+                                </div>
+                                <!-- /.box-header -->
+                                <div class="box-body">
+                                    <div class="table-responsive">
+                                        <table id="attendance2" class="table table-bordered table-hover table-responsive">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        <input type="checkbox" /> Check All</th>
+                                                    <th>Roll No.</th>
+                                                    <th>Admission No.</th>
+                                                    <th>Student Name</th>
+                                                    <th>Remarks</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" /> </td>
+                                                    <td>R12</td>
+                                                    <td>AD021544</td>
+                                                    <td> ABC</td>
+                                                    <td>
+                                                        <input type="text" class="form-control" style="margin-bottom:0px;" />
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" /> </td>
+                                                    <td>R12</td>
+                                                    <td>AD021544</td>
+                                                    <td> ABC</td>
+                                                    <td>
+                                                        <input type="text" class="form-control" style="margin-bottom:0px;" />
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" /> </td>
+                                                    <td>R12</td>
+                                                    <td>AD021544</td>
+                                                    <td> ABC</td>
+                                                    <td>
+                                                        <input type="text" class="form-control" style="margin-bottom:0px;" />
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" /> </td>
+                                                    <td>R12</td>
+                                                    <td>AD021544</td>
+                                                    <td> ABC</td>
+                                                    <td>
+                                                        <input type="text" class="form-control" style="margin-bottom:0px;" />
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" /> </td>
+                                                    <td>R12</td>
+                                                    <td>AD021544</td>
+                                                    <td> ABC</td>
+                                                    <td>
+                                                        <input type="text" class="form-control" style="margin-bottom:0px;" />
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                    <th>
+                                                        <input type="checkbox" /> Check All</th>
+                                                    <th>Roll No.</th>
+                                                    <th>Admission No.</th>
+                                                    <th>Student Name</th>
+                                                    <th>Remarks</th>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- /.box-body -->
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="view-attendance">
+                            <div class="panel panel-default animated slideInUp">
+                                <div class="panel-heading ">
+                                    <h4 class="panel-title"> Attendance </h4>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="col-sm-12">
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                                    <div class="form-group">
+                                                        <label for="">Course <span class="red">*</span> </label>
+                                                        <div>
+                                                            <select class="selectpicker">
+                                                                <option>Select Course</option>
+                                                                <option>Course 1</option>
+                                                                <option>Course 2</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                                    <div class="form-group">
+                                                        <label for="">Batch <span class="red">*</span> </label>
+                                                        <div>
+                                                            <select class="selectpicker">
+                                                                <option>Select Batch</option>
+                                                                <option>Batch 1</option>
+                                                                <option>Batch 2</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                                    <div class="form-group">
+                                                        <label for="">Subject <span class="red">*</span> </label>
+                                                        <div>
+                                                            <select class="selectpicker">
+                                                                <option>Select Subject</option>
+                                                                <option>Subject 1</option>
+                                                                <option>Subject 2</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                                    <div class="form-group">
+                                                        <label for="">Date <span class="red">*</span> </label>
+                                                        <div>
+                                                            <input type="text" class="form-control" id="date" placeholder="Date ">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <button class="btn btn-button">Print Report</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box box-rich-blue animated slideInUp">
+                                <div class="box-header ">
+                                    <h3 class="box-title">Attendance Report : Course 1 - Batch 1 for the month of August</h3>
+                                </div>
+                                <!-- /.box-header -->
+                                <div class="box-body">
+                                    <div class="table-responsive">
+                                        <table id="attendance1" class="table table-bordered table-hover table-responsive">
+                                            <thead>
+                                                <tr>
+                                                    <th>Student Name</th>
+                                                    <th>1</th>
+                                                    <th>2</th>
+                                                    <th>3</th>
+                                                    <th>4</th>
+                                                    <th>5</th>
+                                                    <th>6</th>
+                                                    <th>7</th>
+                                                    <th>8</th>
+                                                    <th>9</th>
+                                                    <th>10</th>
+                                                    <th>11</th>
+                                                    <th>12</th>
+                                                    <th>13</th>
+                                                    <th>14</th>
+                                                    <th>15</th>
+                                                    <th>16</th>
+                                                    <th>17</th>
+                                                    <th>18</th>
+                                                    <th>19</th>
+                                                    <th>20</th>
+                                                    <th>21</th>
+                                                    <th>22</th>
+                                                    <th>23</th>
+                                                    <th>24</th>
+                                                    <th>25</th>
+                                                    <th>26</th>
+                                                    <th>27</th>
+                                                    <th>28</th>
+                                                    <th>29</th>
+                                                    <th>30</th>
+                                                    <th>31</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>ABC</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ABC</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                    <td>P</td>
+                                                </tr>
+                                            </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                    <th>Student Name</th>
+                                                    <th>1</th>
+                                                    <th>2</th>
+                                                    <th>3</th>
+                                                    <th>4</th>
+                                                    <th>5</th>
+                                                    <th>6</th>
+                                                    <th>7</th>
+                                                    <th>8</th>
+                                                    <th>9</th>
+                                                    <th>10</th>
+                                                    <th>11</th>
+                                                    <th>12</th>
+                                                    <th>13</th>
+                                                    <th>14</th>
+                                                    <th>15</th>
+                                                    <th>16</th>
+                                                    <th>17</th>
+                                                    <th>18</th>
+                                                    <th>19</th>
+                                                    <th>20</th>
+                                                    <th>21</th>
+                                                    <th>22</th>
+                                                    <th>23</th>
+                                                    <th>24</th>
+                                                    <th>25</th>
+                                                    <th>26</th>
+                                                    <th>27</th>
+                                                    <th>28</th>
+                                                    <th>29</th>
+                                                    <th>30</th>
+                                                    <th>31</th>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- /.box-body -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.tab-content -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html ng-app="school">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>School</title>
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/ionicons/css/ionicons.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/angular-tooltips.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/ui-grid.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/ngToast.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/ngToast-animations.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/angular-datepicker.css"> 
+        <link rel="stylesheet" type="text/css" href="assets/css/animate.css">   
+        <link rel="stylesheet" type="text/css" href="assets/css/modal.css"> 
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/dist/css/bootstrap-select.min.css">
+        <link rel="stylesheet" href="assets/dist/css/formValidation.css">
+        <link rel="stylesheet" href="assets/plugins/datepicker/datepicker3.css">
+        <link rel="stylesheet" href="assets/css/animation.css">
+
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="assets/dist/css/AdminLTE.min.css">
+
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+        folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="assets/dist/css/skins/_all-skins.min.css">
+
+        <!-- jQuery 2.2.0 -->
+		<script src="assets/plugins/jQuery/jQuery-2.2.0.min.js"></script>
+       
+        <!-- Bootstrap 3.3.6 -->
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+		
+		<!-- FastClick -->
+		<script src="assets/plugins/fastclick/fastclick.js"></script>        
+
+		<!-- AdminLTE App -->
+		<script src="assets/dist/js/app.min.js"></script>
+		
+		<!-- FLOT RESIZE PLUGIN - allows the chart to redraw when the window is resized -->
+		<script src="assets/plugins/flot/jquery.flot.resize.min.js"></script>
+
+		<!-- FLOT PIE PLUGIN - also used to draw donut charts -->
+		<script src="assets/plugins/flot/jquery.flot.pie.min.js"></script>
+
+		<!-- FLOT CATEGORIES PLUGIN - Used to draw bar charts -->
+		<script src="assets/plugins/flot/jquery.flot.categories.min.js"></script> 
+
+        <!-- AngularJS Library  --> 
+        <script src="assets/lib/angular/angular.min.js"></script>
+        <script src="assets/lib/angular/angular-route.min.js"></script>
+
+        <!-- AngularJS Animation -->    
+        <script src="assets/lib/angular/angular-animate.min.js"></script>
+
+        <!-- AngularJS Sanitize -->    
+        <script src="assets/lib/angular/angular-sanitize.min.js"></script>
+
+        <!-- AngularJS Touch -->    
+        <script src="assets/lib/angular/angular-touch.min.js"></script>    
+
+        <!-- AngularJS Tooltip --> 
+        <script src="assets/lib/angular/angular-tooltips.min.js"></script>
+
+        <!-- AngularJS Ui Bootstrap --> 
+        <script src="assets/lib/angular/ui-bootstrap-tpls.min.js"></script>
+
+        <!-- AngularJS Modal  -->
+        <script src="assets/lib/angular/angular-modal-service.min.js"></script>
+
+        <!-- AngularJS Ui Grid  -->
+        <script src="assets/lib/angular/ui-grid.min.js"></script>
+
+        <!-- AngularJS Ui Grid Support Scripts -->
+        <script src="assets/lib/angular/csv.js"></script>
+        <script src="assets/lib/angular/pdfmake.js"></script>
+        <script src="assets/lib/angular/vfs_fonts.js"></script>
+        
+        <!-- NG Toast  -->
+        <script src="assets/lib/ngToast.min.js"></script>
+
+        <!-- Date Picker  -->
+        <script src="assets/lib/angular/angular-datepicker.js"></script>
+
+        <!-- Invoice App Module -->
+        <script src="app.js"></script>   
+
+        <!-- Download PDF -->
+        <script src="assets/lib/angular/kendo.all.min.js"></script>
+
+        <style>
+			input.ng-invalid.ng-dirty{border:1px solid red;}
+		</style>
+
+        <!-- School App Module -->
+        <script src="app.js"></script>    
+        
+
+	</head>
+
+	<body class="hold-transition skin-purple sidebar-mini">
+		<div ng-controller="headerCtrl">
+        	<div ng-include='"components/header/header.html"'></div>
+    	</div> 
+        <div ng-controller="sidebarCtrl">
+            <div ng-include='"components/sidebar/sidebar.html"'></div>
+        </div> 
+
+        <ng-view></ng-view> 
+
+    	<div ng-controller="footerCtrl">
+        	<div ng-include='"components/footer/footer.html"'></div>
+        </div>
+
+        <!-- Controllers -->
+        <script src="components/header/headerCtrl.js"></script>
+		<script src="components/sidebar/sidebarCtrl.js"></script>
+        <script src="components/footer/footerCtrl.js"></script>
+        <script src="components/addBankDetails/addBankDetailsCtrl.js"></script>
+        <script src="components/404/404Ctrl.js"></script>
+        <script src="components/addBooks/addBooksCtrl.js"></script>
+        <script src="components/studentAdmission/studentAdmissionCtrl.js"></script>
+		<script src="components/studentAttendance/studentAttendanceCtrl.js"></script>
+		<script src="components/studentCategory/studentCategoryCtrl.js"></script>
+		<script src="components/studentList/studentListCtrl.js"></script>
+		<script src="components/teacher/teacherCtrl.js"></script>
+	</body>
+	
+</html>

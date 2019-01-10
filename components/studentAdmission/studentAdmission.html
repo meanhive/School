@@ -1,0 +1,459 @@
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <ol class="breadcrumb">
+            <li><a href="../../index.html"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="#">Student</a></li>
+            <li class="active">Student Admission</li>
+        </ol>
+    </section>
+    <!-- Main content <div class="main col-lg-9">-->
+    <section class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-default animated slideInUp">
+                    <div class="panel-heading">
+                        <h4 class="panel-title"> Student Admission</h4>
+                    </div>
+                    <div class="panel-body">
+                        <div class="col-sm-12">
+                            <div class="panel-body">
+                                <form method="POST" class="student-admission" ng-repeat="studentAdmission in admission" name="studForm">
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <h1>offICIAL DETAILS:-</h1>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group-lg">
+                                                <label for="">Register Number<span class="red">*</span></label>
+                                                <input type="text" name="registerNumber" class="form-control" placeholder="Register Number" required="required" ng-model="studentAdmission.registerNumber">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group-lg">
+                                                <label for="">Joining Date<span class="red">*</span></label>
+                                                <datepicker date-format="yyyy-MM-dd" selector="form-control">
+                                                    <input type="text" name="joiningDate" class="form-control" placeholder="Joining Date" required="required" ng-model="studentAdmission.joiningDate">
+                                                </datepicker>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group-lg">
+                                                <label for="">Class<span class="red">*</span></label>
+                                                <select name="selectClass" class="form-control selectpicker" ng-model="studentAdmission.selectClass" required="required" ng-options="class for class in classes">
+                                                    <option value="">Select Class</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group-lg">
+                                                <label for="">Section<span class="red">*</span></label>
+                                                <select name="selectSection" class="form-control selectpicker" required="required" ng-model="studentAdmission.selectSection" ng-options="section for section in sections">
+                                                    <option value="">Select Section</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group-lg">
+                                                <label for="">Role Number<span class="red">*</span></label>
+                                                <input type="text" name="roleNumber" class="form-control" placeholder="Role Number" required="required" ng-model="studentAdmission.roleNumber">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <h1>PERSONAL DETAILS:-</h1>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group-lg">
+                                                <label for="">First Name<span class="red">*</span></label>
+                                                <input type="text" name="firstName" class="form-control" placeholder="First Name" required="required" ng-model="studentAdmission.firstName">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group-lg">
+                                                <label for="">Middle Name</label>
+                                                <input type="text" class="form-control" id="middle_name" placeholder="Middle Name" ng-model="studentAdmission.middleName">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group-lg">
+                                                <label for="">Last Name</label>
+                                                <input type="text" class="form-control" id="last_name" placeholder="Last Name" ng-model="studentAdmission.lastName">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group-lg">
+                                                <label for="">Date Of Birth<span class="red">*</span></label>
+                                                <input type="text" name="dob" class="form-control" id="date_of_birth" name="date_of_birth" placeholder="Date of Birth" required="required" ng-model="studentAdmission.dob">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group-lg">
+                                                <label for="">Gender<span class="red">*</span></label>
+                                                <select class="form-control selectpicker" name="gender" required="required" ng-model="studentAdmission.gender" ng-options="gender for gender in genders">
+                                                    <option value="">Select Gender</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group-lg">
+                                                <label for="">Blood group</label>
+                                                <select class="form-control selectpicker" id="blood_group" ng-model="studentAdmission.bloodGroup" ng-options=" group for group in bloodgroups">
+                                                    <option value="">Please select</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group-lg">
+                                                <label for="">Birth Place</label>
+                                                <input type="text" class="form-control" id="birth_place" name="birth_place" placeholder="Birth Place" ng-model="studentAdmission.birthPlace">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group-lg">
+                                                <label for="">Nationality</label>
+                                                <select class="form-control selectpicker" id="natioality" ng-model="studentAdmission.nationality" ng-options=" nation for nation in nations">
+                                                    <option value="">Please select</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group-lg">
+                                                <label for="">Mother Tongue</label>
+                                                <input type="text" class="form-control" id="mother_tongue" name="mother_tongue" placeholder="Mother Tongue" ng-model="studentAdmission.motherTongue">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group-lg">
+                                                <label for="">Category</label>
+                                                <select class="form-control selectpicker" id="category" ng-model="studentAdmission.category" ng-options=" category for category in categories">
+                                                    <option value="">Please select</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group-lg">
+                                                <label for="">Religion</label>
+                                                <input type="text" class="form-control" id="religion" name="religion" placeholder="Religion" ng-model="studentAdmission.religion">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <h1>CONTACT DETAILS:-</h1>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group-lg">
+                                                <label for="">Permanent Address</label>
+                                                <textarea class="form-control" placeholder="Permanent Address" ng-model="studentAdmission.permanentAddress"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group-lg">
+                                                <label for="">Present Address<span class="red">*</span></label>
+                                                <textarea class="form-control" placeholder="Present Address" required="required" ng-model="studentAdmission.presentAddress" name="presentAddress"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group-lg">
+                                                <label for="">City</label>
+                                                <input type="text" class="form-control" id="city" name="city" placeholder="City" ng-model="studentAdmission.city">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group-lg">
+                                                <label for="">Pin</label>
+                                                <input type="text" class="form-control" id="pin" name="pin" placeholder="Pin" ng-model="studentAdmission.pin">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group-lg">
+                                                <label for="">Country</label>
+                                                <select class="form-control selectpicker" id="country" ng-model="studentAdmission.country" ng-options=" nation for nation in nations">
+                                                    <option value="">Select Country</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group-lg">
+                                                <label for="">State</label>
+                                                <select class="form-control selectpicker" id="state" ng-model="studentAdmission.state" ng-options="state for state in states ">
+                                                    <option value="">Select State</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group-lg">
+                                                <label for="">Phone</label>
+                                                <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone" ng-model="studentAdmission.phone">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group-lg">
+                                                <label for="">Mobile</label>
+                                                <input type="text" class="form-control" id="mobile" name="mobile" placeholder="Mobile" ng-model="studentAdmission.mobile">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group-lg">
+                                                <label for="">Email <span class="red">*</span></label>
+                                                <input type="email" name="email" class="form-control" id="email" required="required" placeholder="Email" ng-model="studentAdmission.email">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <h1>FATHER'S DETAILS:-</h1>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group-lg">
+                                                <label for="">Name</label>
+                                                <input type="text" class="form-control" id="father-name" placeholder="Name" ng-model="studentAdmission.fatherName">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group-lg">
+                                                <label for="">Mobile</label>
+                                                <input type="text" class="form-control" id="father-mobile" placeholder="Mobile" ng-model="studentAdmission.fatherMobile">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group-lg">
+                                                <label for="">Job</label>
+                                                <input type="text" class="form-control" id="father-job" placeholder="Job" ng-model="studentAdmission.fatherJob">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <h1>MOTHER'S DETAILS:-</h1>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group-lg">
+                                                <label for="">Name</label>
+                                                <input type="text" class="form-control" id="mother-name" placeholder="Name" ng-model="studentAdmission.motherName">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group-lg">
+                                                <label for="">Mobile</label>
+                                                <input type="text" class="form-control" id="mother-mobile" placeholder="Mobile" ng-model="studentAdmission.motherMobile">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group-lg">
+                                                <label for="">Job</label>
+                                                <input type="text" class="form-control" id="mother-job" placeholder="Job" ng-model="studentAdmission.motherJob">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <h1>GUARDIAN'S DETAILS:-</h1>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group-lg">
+                                                <label for="">Name <span class="red">*</span></label>
+                                                <input type="text" name="guardian" class="form-control" placeholder="Name" required="required" ng-model="studentAdmission.guardian">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group-lg">
+                                                <label for="">Relation <span class="red">*</span></label>
+                                                <input type="text" class="form-control" name="relation" placeholder="Relation" required="required" ng-model="studentAdmission.relation" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group-lg">
+                                                <label for="">Education <span class="red">*</span></label>
+                                                <input type="text" name="education" class="form-control" placeholder="Education" required="required" ng-model="studentAdmission.education">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group-lg">
+                                                <label for="">Occupation</label>
+                                                <input type="text" name="occupation" class="form-control" id="occupation" placeholder="Occupation" ng-model="studentAdmission.occupation" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group-lg">
+                                                <label for="">Income</label>
+                                                <input type="text" class="form-control" id="income" name="income" placeholder="Income" ng-model="studentAdmission.income">
+                                            </div>
+                                        </div>
+                                        <p>Mark Tick if Guardian Address same as Student Address
+                                            <input type="checkbox" ng-model="vm.myChkModel" ng-change="vm.myClick(vm.myChkModel)" style="width:6%;" />
+                                        </p>
+                                        </p>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group-lg">
+                                                <label for="">Address</label>
+                                                <textarea name="guardianPermanentAddress" class="form-control" placeholder="Permanent Address" ng-model="studentAdmission.guardianPermanentAddress" required></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group-lg">
+                                                <label for="">City</label>
+                                                <input type="text" class="form-control" id="guardian-city" placeholder="City" ng-model="studentAdmission.guardianCity">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group-lg">
+                                                <label for="">Country</label>
+                                                <select class="form-control selectpicker" id="country" ng-model="studentAdmission.guardianCountry" ng-options=" nation for nation in nations">
+                                                    <option value="">Select Country</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group-lg">
+                                                <label for="">Phone</label>
+                                                <input type="text" class="form-control" id="guardian-phone" name="guardian-phone" placeholder="Phone" ng-model="studentAdmission.guardianPhone">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group-lg">
+                                                <label for="">Mobile<span class='red'>*</span></label>
+                                                <input type="text" name="guardianMobile" class="form-control" required="required" placeholder="Mobile" ng-model="studentAdmission.guardianMobile">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group-lg">
+                                                <label for="">Email<span class='red'>*</span></label>
+                                                <input type="email" name="guardianEmail" class="form-control" placeholder="Email" required="required" ng-model="studentAdmission.guardianEmail">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <h1>PREVIOUS QUALIFICATION DETAILS:-</h1>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group-lg">
+                                                <label for="">School Name</label>
+                                                <input type="text" class="form-control" id="school-name" name="school-name" placeholder="School Name" ng-model="studentAdmission.schoolName">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group-lg">
+                                                <label for="">Address</label>
+                                                <textarea class="form-control" placeholder="Permanent Address" ng-model="studentAdmission.schoolAddress"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="form-group-lg">
+                                                <label for="">Qualification</label>
+                                                <input type="text" class="form-control" id="qualification" name="qualification" placeholder="Qualification" ng-model="studentAdmission.qualification">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <div class="form-group-lg">
+                                                <p>Transport
+                                                    <input type="checkbox" class="form-control" ng-model="studentAdmission.transport"> </p>
+                                                <p>Hostel
+                                                    <input type="checkbox" class="form-control" ng-model="studentAdmission.hostel"> </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row transport_box" ng-show="studentAdmission.transport">
+                                        <div class="col-lg-3">
+                                            <div class="form-group-lg">
+                                                <label for="">Route </label>
+                                                <select class="form-control selectpicker" ng-model="studentAdmission.route" ng-options="route for route in routes">
+                                                    <option value="">Select Route</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form-group-lg">
+                                                <label for="">Destination </label>
+                                                <select class="form-control selectpicker" ng-model="studentAdmission.destination" ng-options="destination for destination in destinations">
+                                                    <option value="">Select Destination</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form-group-lg">
+                                                <label for="">Start Date</label>
+                                                <input type="text" class="form-control" placeholder="Start Date" ng-model="studentAdmission.startDate">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form-group-lg">
+                                                <label for="">End Date</label>
+                                                <input type="text" class="form-control" placeholder="End Date" ng-model="studentAdmission.endDate">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row hostel_box" ng-show="studentAdmission.hostel">
+                                        <div class="col-lg-3">
+                                            <div class="form-group-lg">
+                                                <label for="">Hostel Name </label>
+                                                <select class="form-control selectpicker" ng-model="studentAdmission.hostelName" ng-options="hostel for hostel in hostels">
+                                                    <option value="">Select Hostel Name</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form-group-lg">
+                                                <label for="">Hostel Room </label>
+                                                <select class="form-control selectpicker" ng-model="studentAdmission.hostelRoom" ng-options="room for room in rooms">
+                                                    <option value="">Select Hostel Room</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form-group-lg">
+                                                <label for="">Registration Date <span class="red">*</span> </label>
+                                                <input type="text" class="form-control" id="registration" name="registrationDate" placeholder="Registration Date" ng-model="studentAdmission.registrationDate">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form-group-lg">
+                                                <label for="">Vacating Date <span class="red">*</span></label>
+                                                <input type="text" class="form-control" name="VacatingDate" placeholder="Vacating Date" ng-model="studentAdmission.VacatingDate" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <div class="form-group-lg">
+                                                <label for="" class="col-sm-2 control-label">Attachment </label>
+                                                <div class="col-sm-6">
+                                                    <input type="file" class="form-control" placeholder="Attachment" ng-model="studentAdmission.attachment">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group-lg">
+                                        <div class="col-lg-10 col-lg-offset-2">
+                                            <button class="form-control btn btn-primary btn-md pull-right" type="button" ng-click="studForm.$dirty || studForm.$error &&  studentAdmissionDone()">Save</button>
+                                            <button class="form-control btn btn-warning btn-mdpull-right" type="button">Cancel</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
